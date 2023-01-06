@@ -4,6 +4,10 @@ let ties = 0;
 // 1. Initialize `choices` array: r, p, s. representing rock, paper, or scissors.
 let choices = ["r", "p", "s"];
 // 2. Prompt user to enter "r," "p," or "s".
+let wantToPlay = confirm("Do you want to play rock, paper, scissors?")
+if (wantToPlay) {
+    rps_game();
+}
 
 function rps_game () {
     for (i = 0; i < 10; i++) {
@@ -36,10 +40,6 @@ function rps_game () {
     }
     return alert(`wins: ${wins} losses: ${losses} ties: ${ties}`);
 }
-
-window.onload = function() {
-    rps_game();
-  };
 
 // 5. We then add to their score.
 
